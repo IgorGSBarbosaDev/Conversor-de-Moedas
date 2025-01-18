@@ -2,6 +2,7 @@ package org.example;
 
 import java.net.http.*;
 import java.net.URI;
+import java.sql.SQLException;
 import java.util.Map;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -20,6 +21,7 @@ public class CurrencyConverter {
         ObjectMapper objectMapper = new ObjectMapper();
         Map<String, Object> json = objectMapper.readValue(response.body(), Map.class);
         Map<String, Double> rates = (Map<String, Double>) json.get("rates");
+
 
         if (!rates.containsKey(toCurrency)) {
             throw new IllegalArgumentException("Moeda de destino inválida ou não encontrada.");
