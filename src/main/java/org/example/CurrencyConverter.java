@@ -1,15 +1,18 @@
 package org.example;
 
+import java.io.IOException;
 import java.net.http.*;
 import java.net.URI;
 import java.sql.SQLException;
 import java.util.Map;
+
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class CurrencyConverter {
     private static final String API_URL = "https://api.exchangerate-api.com/v4/latest/";
 
-    public double fetchConversionRate(String fromCurrency, String toCurrency){
+    public double fetchConversionRate(String fromCurrency, String toCurrency) throws IOException, InterruptedException {
         String url = API_URL + fromCurrency;
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
