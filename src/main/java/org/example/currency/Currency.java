@@ -1,4 +1,4 @@
-package org.example;
+package org.example.currency;
 
 public class Currency {
     private String code; // Código da moeda (ex: USD, EUR)

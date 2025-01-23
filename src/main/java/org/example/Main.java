@@ -1,5 +1,8 @@
 package org.example;
 
+import org.example.conversion.ConversionHistory;
+import org.example.currency.CurrencyConverter;
+
 import java.util.Scanner;
 
 public class Main {

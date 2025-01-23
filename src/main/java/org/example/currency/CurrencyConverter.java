@@ -1,12 +1,9 @@
-package org.example;
+package org.example.currency;
 
 import java.io.IOException;
 import java.net.http.*;
 import java.net.URI;
-import java.sql.SQLException;
 import java.util.Map;
-
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class CurrencyConverter {

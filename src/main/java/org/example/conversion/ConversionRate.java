@@ -1,4 +1,4 @@
-package org.example;
+package org.example.conversion;
 
 public class ConversionRate {
     private String fromCurrency;
