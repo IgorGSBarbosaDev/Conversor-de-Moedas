@@ -10,11 +10,15 @@ public class Main {
         try (Scanner scanner = new Scanner(System.in)) {
             CurrencyConverter converter = new CurrencyConverter();
             ConversionHistory history = new ConversionHistory();
+            System.out.println("BRL - Real");
+            System.out.println("USD - Dólar Americano");
+            System.out.println("EUR - Euro");
+            System.out.println("JPY - Iene Japonês");
 
-            System.out.print("Insira a moeda para conversão (por exemplo, USD): ");
+            System.out.print("Insira a moeda de origem(ex: USD): ");
             String fromCurrency = scanner.nextLine();
 
-            System.out.print("Insira a moeda para conversão (por exemplo, EUR): ");
+            System.out.print("Insira a moeda para conversão (por exemplo, BRL): ");
             String toCurrency = scanner.nextLine();
 
             System.out.print("Digite a quantia: ");
